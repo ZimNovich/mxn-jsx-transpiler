@@ -1,0 +1,40 @@
+{
+	"name": "@ezpresso/mxn-jsx-transpiler",
+	"main": "mxn-jsx-transpiler.js",
+	"description": "MXN JSX Transpiler - parses and compiles (transpiles) JSX to JavaScript",
+	"version": "0.8.0",
+	"homepage": "https://github.com/zimnovich/mxn-jsx-transpiler",
+	"license": "MIT",
+	"author": {
+		"name": "Ilya Zimnovich",
+		"email": "zimnovich@gmail.com"
+	},
+	"keywords": [
+		"jsx",
+		"react",
+		"transpile",
+		"transpiler",
+		"transform",
+		"ast",
+		"vdom",
+		"javascript"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/zimnovich/mxn-jsx-transpiler"
+	},
+	"bugs": {
+		"url": "https://github.com/zimnovich/mxn-jsx-transpiler/issues"
+	},
+	"scripts": {
+		"jsx-transpile": "node bin/mxn-jsx-transpile",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"bin": {
+		"jsx-transpile": "bin/mxn-jsx-transpile"
+	},
+	"files": [
+		"bin",
+		"mxn-jsx-transpiler.js"
+	],
+}
