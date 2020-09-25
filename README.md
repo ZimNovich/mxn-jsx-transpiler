@@ -1,6 +1,6 @@
-# jsx.js
+# mxn-jsx-transpiler.js
 
-a light and extendable jsx transpiler.
+A light and extendable jsx transpiler.
 
 - ~3kb minified
 - ~1.5kb minified + gzipped
