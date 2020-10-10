@@ -22,6 +22,8 @@ let parser = acorn.Parser.extend(acornJsx({
     allowNamespaces: false
 }) );
 
+let code = 'let a = <Greeting firstName="Maximilian" lastName="Pierpont" age={1 + 2 + 3 + 4} />;';
+
 let ast = parser.parse(code, {
     ecmaVersion: 2020,
     sourceType: "module",
