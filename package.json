@@ -1,5 +1,5 @@
 {
-	"name": "@ezpresso/mxn-jsx-transpiler",
+	"name": "mxn-jsx-transpiler",
 	"main": "mxn-jsx-transpiler.js",
 	"description": "MXN JSX Transpiler - parses and compiles (transpiles) JSX to JavaScript",
 	"version": "0.8.0",
@@ -36,5 +36,5 @@
 	"files": [
 		"bin",
 		"mxn-jsx-transpiler.js"
-	],
+	]
 }
