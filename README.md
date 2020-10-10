@@ -5,7 +5,7 @@ A light and extendable jsx transpiler.
 - ~3kb minified
 - ~1.5kb minified + gzipped
 
-## API
+## Usage example
 
 ```javascript
 // Acorn & Astring
@@ -41,6 +41,7 @@ let formattedCode = generate(ast_new, {
     //sourceMap: map
 });
 ```
+## API
 
 ```javascript
 jsx(
