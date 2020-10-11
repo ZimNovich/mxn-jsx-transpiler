@@ -4,9 +4,6 @@
 // ESTree Walker
 const walk = require("estree-walker").walk;
 
-// Util
-const lodash = require("lodash");
-
 const callFunction = function (name, args) {
     return {
         type: "CallExpression",
@@ -97,7 +94,7 @@ var MXNJSXConv = function(tree, options)
     };
 
     // Mixing mandatory and user provided arguments
-    options = lodash.merge(defaults, options);
+    options = Object.assign(defaults, options);
 
     walk(tree, {
         enter: function(node, parent, prop, index) {
