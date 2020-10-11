@@ -1,6 +1,6 @@
 # mxn-jsx-transpiler.js
 
-Transforms JSX expressions to JS call expressions in ESTree-compilant AST. 
+Transforms JSX AST into ESTree-compilant AST with JS call expressions.
 
 - ~3kb minified
 - ~1.5kb minified + gzipped
