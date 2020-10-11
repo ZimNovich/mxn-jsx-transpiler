@@ -78,3 +78,7 @@ jsx(str, 'React.createElement');
 ```
 
 If the input string has a pragma comment, for example`/* @jsx h */` it will use that for the output mapping, if no pragma comment/custom mapping has been specicifed it defaults to hyperscript `h(...)`.
+
+## License
+
+This plugin is issued under the MIT license.
