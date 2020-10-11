@@ -1,11 +1,11 @@
 # mxn-jsx-transpiler.js
 
-A light and extendable jsx transpiler.
+Transforms JSX expressions to JS call expressions in ESTree-compilant AST. 
 
 - ~3kb minified
 - ~1.5kb minified + gzipped
 
-## Usage example
+## Usage
 
 ```javascript
 // Acorn & Astring
