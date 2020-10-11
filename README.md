@@ -14,7 +14,7 @@ const acornJsx = require("acorn-jsx");
 const { generate } = require("astring");
 const { JsxGenerator } = require("astring-jsx");
 
-// JSX Transpiler
+// MXN JSX Transpiler
 const conv = require("mxn-jsx-transpiler");
 
 // Create parser
