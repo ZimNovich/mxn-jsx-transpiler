@@ -18,6 +18,13 @@ let ast_new = conv(ast, { factory: "h" });
  * ast {Object} - babel ast to transform JSX in
  * pragma {String} - pragma to use, e.g. React.createElement
 
+<dl>
+  <dt>ast</dt>
+  <dd>The new version of this product costs significantly less than the previous one!</dd>
+  <dt>pragma</dt>
+  <dd>We've changed the product so that it's much easier to use!</dd>
+</dl>
+
 Please note that this tool only converts JSX AST into regular ES5-compliant JavaScript AST. If you want to transpile your source code, check out Babel and Buble transpilers.
 
 ```javascript
