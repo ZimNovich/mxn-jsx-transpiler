@@ -12,6 +12,10 @@ Requiring this module provides you with an Acorn plugin that you can use like th
 const conv = require("mxn-jsx-transpiler");
 let ast_new = conv(ast, { factory: "h" });
 ```
+Parameters
+
+    ast {Object} - babel ast to transform JSX in
+    pragma {String} - pragma to use, e.g. React.createElement
 
 Please note that this tool only converts JSX AST into regular ES5-compliant JavaScript AST. If you want to transpile your source code, check out Babel and Buble transpilers.
 
