@@ -7,6 +7,14 @@ Transforms JSX AST into ESTree-compilant AST with JS call expressions.
 
 ## Usage
 
+Requiring this module provides you with an Acorn plugin that you can use like this:
+```javascript
+const conv = require("mxn-jsx-transpiler");
+let ast_new = conv(ast, { factory: "h" });
+```
+
+Please note that this tool only converts JSX AST into regular ES5-compliant JavaScript AST. If you want to transpile your source code, check out Babel and Buble transpilers.
+
 ```javascript
 // Acorn & Astring
 const acorn = require("acorn");
