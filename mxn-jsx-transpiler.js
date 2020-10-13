@@ -1,5 +1,11 @@
-// JSX-Transpiler
+// NXN-JSX-Transpiler
 // Copyright (c) 2020 Ilya Zimnovich
+
+// Acorn & Astring
+const acorn = require("acorn");
+const acornJsx = require("acorn-jsx");
+const { generate } = require("astring");
+const { JsxGenerator } = require("astring-jsx");
 
 // ESTree Walker
 const walk = require("estree-walker").walk;
@@ -85,7 +91,7 @@ const transformAttributes = function(attributes) {
 }
 
 // MXN JSX Converter
-var MXNJSXConv = function(tree, options)
+var MXNJSXConv = function(code, options)
 {
     // Setting default options
     const defaults = {
@@ -95,6 +101,18 @@ var MXNJSXConv = function(tree, options)
 
     // Mixing mandatory and user provided arguments
     options = Object.assign(defaults, options);
+
+    // Create parser
+    let parser = acorn.Parser.extend(acornJsx({
+        allowNamespaces: false
+    }) );
+
+    let tree = parser.parse(code, {
+        ecmaVersion: 2020,
+        sourceType: "module",
+        locations: false,
+        plugins: { jsx: true }
+    });
 
     walk(tree, {
         enter: function(node, parent, prop, index) {
@@ -176,7 +194,15 @@ var MXNJSXConv = function(tree, options)
         }
     });
 
-    return tree;
+    let formattedCode = generate(tree, {
+        indent: "    ",
+        lineEnd: "\n",
+        comments: false,
+        generator: JsxGenerator
+        //sourceMap: map
+    });
+
+    return formattedCode;
 };
 
 // export the module
