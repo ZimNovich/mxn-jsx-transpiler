@@ -26,10 +26,10 @@ let transpiled_code = transpile(code, { factory: "h" });
 ```
 
 Where
- - `code` {String} - ESTree-compilant JSX AST to transform JSX in
+ - `code` {String} - JS source code with JSX elements
  - `factory` {String} - factory function to use, e.g. `h`, `m`, `React.createElement`
 
-Please note that this tool transpiles your source code from JSX to regular JS. If you want to transform your JSX AST into JavaScript AST, check out [mxn-jsx-ast-transformer](https://github.com/ZimNovich/mxn-jsx-ast-transformer).
+Please note that this tool transpiles your source code from JSX to regular JavaScript. If you want to transform your JSX AST into JavaScript AST, check out [mxn-jsx-ast-transformer](https://github.com/ZimNovich/mxn-jsx-ast-transformer).
 
 ## License
 
