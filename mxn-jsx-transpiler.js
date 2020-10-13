@@ -94,7 +94,7 @@ var MXNJSXConv = function(code, options)
 {
     // Setting default options
     const defaults = {
-        factory: "preact.h",
+        factory: "h", // preact.h
         indent: "    ",
         lineEnd: "\n",
         comments: false
@@ -198,6 +198,8 @@ var MXNJSXConv = function(code, options)
     let formattedCode = generate(tree, options);
     return formattedCode;
 };
+
+MXNJSXConv.version = "0.8.0";
 
 // export the module
 module.exports = MXNJSXConv;

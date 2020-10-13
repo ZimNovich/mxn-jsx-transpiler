@@ -1,9 +1,9 @@
 {
 	"name": "mxn-jsx-transpiler",
 	"main": "mxn-jsx-transpiler.js",
-	"description": "MXN JSX Transpiler - parses and compiles (transpiles) JSX to JavaScript",
+	"description": "MXN JSX Transpiler - transpiles JSX to JavaScript",
 	"version": "0.8.0",
-	"homepage": "https://github.com/zimnovich/mxn-jsx-transpiler",
+	"homepage": "https://github.com/ZimNovich/mxn-jsx-transpiler",
 	"license": "MIT",
 	"author": {
 		"name": "Ilya Zimnovich",
@@ -20,21 +20,24 @@
 		"javascript"
 	],
 	"dependencies": {
+		"acorn": "^8.0.1",
+		"acorn-jsx": "^5.2.0",
+		"astring": "^1.4.3",
 		"estree-walker": "^2.0.1"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/zimnovich/mxn-jsx-transpiler"
+		"url": "https://github.com/ZimNovich/mxn-jsx-transpiler"
 	},
 	"bugs": {
-		"url": "https://github.com/zimnovich/mxn-jsx-transpiler/issues"
+		"url": "https://github.com/ZimNovich/mxn-jsx-transpiler/issues"
 	},
 	"scripts": {
-		"jsx-transpile": "node bin/mxn-jsx-transpile",
+		"jsx-transpile": "node bin/jsx-transpile",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"bin": {
-		"jsx-transpile": "bin/mxn-jsx-transpile"
+		"jsx-transpile": "bin/jsx-transpile"
 	},
 	"files": [
 		"bin",
