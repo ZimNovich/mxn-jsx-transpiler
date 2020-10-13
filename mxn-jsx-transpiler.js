@@ -1,4 +1,4 @@
-// MXN JSX Transpiler - transpiles JSX to JavaScript
+// MXN JSX Transpiler - transpiles JSX to regular JavaScript
 // Copyright (c) 2020 Ilya Zimnovich
 
 // Acorn & Astring
