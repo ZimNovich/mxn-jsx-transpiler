@@ -1,4 +1,4 @@
-// NXN-JSX-Transpiler
+// MXN JSX Transpiler - transpiles JSX to JavaScript
 // Copyright (c) 2020 Ilya Zimnovich
 
 // Acorn & Astring
