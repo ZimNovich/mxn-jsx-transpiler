@@ -2,7 +2,7 @@
 	"name": "mxn-jsx-transpiler",
 	"main": "mxn-jsx-transpiler.js",
 	"description": "Transpiles JSX to regular JavaScript",
-	"version": "0.8.2",
+	"version": "0.8.3",
 	"homepage": "https://github.com/ZimNovich/mxn-jsx-transpiler",
 	"license": "MIT",
 	"author": {
@@ -37,7 +37,7 @@
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"bin": {
-		"jsx-transpile": "bin/jsx-transpile"
+		"jsx-transpile": "bin/jsx-transpile.js"
 	},
 	"files": [
 		"bin",
