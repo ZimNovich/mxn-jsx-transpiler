@@ -1,8 +1,8 @@
 {
 	"name": "mxn-jsx-transpiler",
 	"main": "mxn-jsx-transpiler.js",
-	"description": "MXN JSX Transpiler - transpiles JSX to regular JavaScript",
-	"version": "0.8.0",
+	"description": "Transpiles JSX to regular JavaScript",
+	"version": "0.8.1",
 	"homepage": "https://github.com/ZimNovich/mxn-jsx-transpiler",
 	"license": "MIT",
 	"author": {

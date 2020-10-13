@@ -199,7 +199,7 @@ var MXNJSXConv = function(code, options)
     return formattedCode;
 };
 
-MXNJSXConv.version = "0.8.0";
+MXNJSXConv.version = "0.8.1";
 
 // export the module
 module.exports = MXNJSXConv;
