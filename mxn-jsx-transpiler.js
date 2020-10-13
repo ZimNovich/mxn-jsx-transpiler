@@ -5,7 +5,6 @@
 const acorn = require("acorn");
 const acornJsx = require("acorn-jsx");
 const { generate } = require("astring");
-const { JsxGenerator } = require("astring-jsx");
 
 // ESTree Walker
 const walk = require("estree-walker").walk;
@@ -96,7 +95,9 @@ var MXNJSXConv = function(code, options)
     // Setting default options
     const defaults = {
         factory: "preact.h",
-        keepComments: false
+        indent: "    ",
+        lineEnd: "\n",
+        comments: false
     };
 
     // Mixing mandatory and user provided arguments
@@ -194,14 +195,7 @@ var MXNJSXConv = function(code, options)
         }
     });
 
-    let formattedCode = generate(tree, {
-        indent: "    ",
-        lineEnd: "\n",
-        comments: false,
-        generator: JsxGenerator
-        //sourceMap: map
-    });
-
+    let formattedCode = generate(tree, options);
     return formattedCode;
 };
 
