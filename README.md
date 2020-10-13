@@ -21,7 +21,7 @@ Where
  - `code` {String} - ESTree-compilant JSX AST to transform JSX in
  - `factory` {String} - factory function to use, e.g. `h`, `m`, `React.createElement`
 
-Please note that this tool transpiles your source code from JSX to JS. If you want to transform your JSX AST into regular JavaScript, check out [mxn-jsx-ast-transformer](https://github.com/ZimNovich/mxn-jsx-ast-transformer).
+Please note that this tool transpiles your source code from JSX to regular JS. If you want to transform your JSX AST into JavaScript AST, check out [mxn-jsx-ast-transformer](https://github.com/ZimNovich/mxn-jsx-ast-transformer).
 
 ## License
 
