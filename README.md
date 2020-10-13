@@ -5,6 +5,8 @@ Transpiles JSX to regular JavaScript
 - ~6.1kb size
 - ~2.5kb minified + gzipped
 
+> Transpilers are also known as source-to-source compilers. They take in a source code file and convert it to another source code file in some other language or a different version of the same language.
+
 ## Usage
 
 We suggest you to load the module via `require` until the stabilization of ES modules in Node.js:
