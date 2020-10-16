@@ -44,11 +44,22 @@ const makeSpread = function(arg) {
     };
 };
 
+// Check if first letter of word is a capital letter
+// From [[https://stackoverflow.com/questions/8334606/check-if-first-letter-of-word-is-a-capital-letter]]
+const initialIsCapital = function(word) {
+    return word[0] !== word[0].toLowerCase();
+}
+
 // Transforms name
 const transformName = function(name) {
     switch (name.type) {
         case "JSXIdentifier":
-            return makeLiteral(name.name);
+            // Check if the name starts with capital letter
+            if ( initialIsCapital(name.name) ) {
+                return makeIdentifier(name.name);
+            } else {
+                return makeLiteral(name.name);
+            }
 
         case "JSXMemberExpression":
             return name;
@@ -199,7 +210,7 @@ var MXNJSXConv = function(code, options)
     return formattedCode;
 };
 
-MXNJSXConv.version = "0.8.3";
+MXNJSXConv.version = "0.8.4";
 
 // export the module
 module.exports = MXNJSXConv;
