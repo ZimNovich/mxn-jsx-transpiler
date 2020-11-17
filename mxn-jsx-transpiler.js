@@ -70,23 +70,28 @@ const transformName = function(name) {
 }
 
 // Transforms attributes into properties
-const transformAttributes = function(attributes) {
+const transformAttributes = function(attributes, quotePropNames) {
     return attributes.map(function(attribute) {
-        if (attribute.type == "JSXAttribute") {
+        if (attribute.type == "JSXAttribute")
+        {
+            const identifier = (!quotePropNames)
+                             ? makeIdentifier(attribute.name.name)
+                             : makeLiteral(attribute.name.name);
+
             if (!attribute.value) {
                 return makeProperty(
-                    makeIdentifier(attribute.name.name), // Check it
+                    identifier, // Check it
                     makeLiteral(true)
                 ); 
             }
+            
             switch (attribute.value.type) {
                 case "Literal":
                 case "JSXExpressionContainer":
-                        return makeProperty(
-                        makeIdentifier(attribute.name.name),
+                    return makeProperty(
+                        identifier,
                         attribute.value
                     ); 
-        
                 default:
                     throw new Error(`Unknown attribute value type (${attribute.value.type})`);
             }
@@ -106,6 +111,7 @@ var MXNJSXConv = function(code, options)
     // Setting default options
     const defaults = {
         factory: "h", // preact.h
+        quotePropNames: true,
         indent: "    ",
         lineEnd: "\n",
         comments: false
@@ -182,7 +188,7 @@ var MXNJSXConv = function(code, options)
                 if (attributes.length && (attributes.length > 0) ) {
                     let transformedAttributes = {
                         "type": "ObjectExpression",
-                        "properties": transformAttributes(attributes)
+                        "properties": transformAttributes(attributes, options.quotePropNames)
                     };
                     args.push(transformedAttributes);
                 }
@@ -210,7 +216,7 @@ var MXNJSXConv = function(code, options)
     return formattedCode;
 };
 
-MXNJSXConv.version = "0.8.4";
+MXNJSXConv.version = "0.8.5";
 
 // export the module
 module.exports = MXNJSXConv;
