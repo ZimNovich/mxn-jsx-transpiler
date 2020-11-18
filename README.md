@@ -20,14 +20,30 @@ We suggest you to load the module via `require` until the stabilization of ES mo
 const transpile = require("mxn-jsx-transpiler");
 ```
 
-Now you can transform all JSX entries into JS calls like this:
+Now you can transpile ("desugar") all JSX entries into regular JS calls as follows:
 ```javascript
-let transpiled_code = transpile(code, { factory: "h" });
+let transpiled_code = transpile(code[, options]);
 ```
 
 Where
  - `code` {String} - JS source code with JSX elements
- - `factory` {String} - factory function to use, e.g. `h`, `m`, `React.createElement`
+ - `options` {Object} - options for JSX ⇒ JS transpilation
+
+The default values for the `options` object are shown below:
+```javascript
+{
+    factory: "h",         // factory function to use, e.g. `h`, `m`, `React.createElement`
+    quotePropNames: true, // put property names into quotes
+    indent: "    ",       // string to use for indentation
+    lineEnd: "\n"         // string to use for line endings
+}
+```
+
+Below is an advanced usage example:
+
+```javascript
+let transpiled_code = transpile(code, { factory: "h" });
+```
 
 Please note that this tool transpiles your source code from JSX to regular JavaScript. If you want to transform your JSX AST into JavaScript AST, check out [mxn-jsx-ast-transformer](https://github.com/ZimNovich/mxn-jsx-ast-transformer).
 
