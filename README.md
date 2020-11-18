@@ -42,7 +42,7 @@ The default values for the `options` object are shown below:
 Below is an advanced usage example:
 
 ```javascript
-let transpiled_code = transpile(code, { factory: "h" });
+let transpiled_code = transpile(code, { factory: "React.createElement", quotePropNames: false });
 ```
 
 Please note that this tool transpiles your source code from JSX to regular JavaScript. If you want to transform your JSX AST into JavaScript AST, check out [mxn-jsx-ast-transformer](https://github.com/ZimNovich/mxn-jsx-ast-transformer).
