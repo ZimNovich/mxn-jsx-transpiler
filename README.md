@@ -47,6 +47,11 @@ let transpiled_code = transpile(code, { factory: "React.createElement", quotePro
 
 Please note that this tool transpiles your source code from JSX to regular JavaScript. If you want to transform your JSX AST into JavaScript AST, check out [mxn-jsx-ast-transformer](https://github.com/ZimNovich/mxn-jsx-ast-transformer).
 
+## Related
+
+- [mxn-jsx-ast-transformer](https://github.com/ZimNovich/mxn-jsx-ast-transformer) - Transforms JSX AST into regular JS AST
+- [mxn-jsx-transpiler](https://github.com/ZimNovich/mxn-jsx-transpiler) - Transpiles JSX to regular JavaScript
+
 ## License
 
 This module is released under the MIT license.
