@@ -5,7 +5,7 @@ Transpiles JSX to regular JavaScript
 - ~6.1kb size
 - ~2.5kb minified + gzipped
 
-## What is transpiler?
+## What is a transpiler?
 
 > Transpiling is a specific term for taking source code written in one language and transforming into another language that has a similar level of abstraction.
 >
